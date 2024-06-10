@@ -3,7 +3,7 @@
 - **Book Finder**<br>
  A webpage to search for books by its title or description
 
-- **Quote Animtion**<br>
+- **Quote Animation**<br>
 Scrollable webpage showcasing animated quotes
 
 - **Task Tracker**<br>
