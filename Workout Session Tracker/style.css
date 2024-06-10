@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --color-primary: #ff6347;
+    --color-secondary: #ffcccb;
+    --color-background: #f0f8ff;
+    --color-text: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--color-primary);
+}
+
+h2 {
+    font-weight: 400;
+    margin: 5px 0;
+    color: var(--color-primary);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 20px; /* Add gap between the circles */
+}
+
+.timeline .session {
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    margin: 10px;
+    width: 70px; /* Increase width for better spacing */
+    height: 70px; /* Increase height for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: var(--color-primary);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.timeline .session:hover {
+    transform: scale(1.1);
+}
+
+.timeline .session::after {
+    content: attr(data-session);
+    position: absolute;
+    top: 80px; /* Adjust position for better alignment */
+    width: 100px;
+    text-align: center;
+    font-size: 0.75em;
+    color: var(--color-text);
+}
+
+p {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.workout-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.workout-btn {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.workout-btn:hover {
+    background-color: #e55a3b;
+}
+
+#remaining-time {
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
