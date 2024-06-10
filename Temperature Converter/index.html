@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="converter-wrapper">
+      <header>
+        <h1>Temperature Converter</h1>
+      </header>
+      <div class="converter-box">
+        <div class="temperature">
+          <select id="scale-one">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+            <option value="Rankine">Rankine</option>
+            <option value="Delisle">Delisle</option>
+            <option value="Newton">Newton</option>
+            <option value="Réaumur">Réaumur</option>
+            <option value="Rømer">Rømer</option>
+            <option value="Leiden">Leiden</option>
+            <option value="Gas Mark">Gas Mark</option>
+          </select>
+          <input type="number" id="value-one" placeholder="0" value="0" />
+        </div>
+
+        <div class="swap">
+          <button id="swap-button">Swap units</button>
+        </div>
+
+        <div class="temperature">
+          <select id="scale-two">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin" selected>Kelvin</option>
+            <option value="Rankine">Rankine</option>
+            <option value="Delisle">Delisle</option>
+            <option value="Newton">Newton</option>
+            <option value="Réaumur">Réaumur</option>
+            <option value="Rømer">Rømer</option>
+            <option value="Leiden">Leiden</option>
+            <option value="Gas Mark">Gas Mark</option>
+          </select>
+          <input type="number" id="value-two" placeholder="0" />
+        </div>
+      </div>
+      <div id="conversion-result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
